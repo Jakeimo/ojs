@@ -24,7 +24,7 @@
 				<td>
 				{capture assign="filterInput"}{call_hook name="Templates::Search::SearchResults::FilterInput" filterName="simpleQuery" filterValue="" size=15}{/capture}
 				{if empty($filterInput)}
-				<label for="simpleQuery">{translate key="navigation.search"}
+				<label for="simpleQuery">{translate key="navigation.search"} <br />
 					<input type="text" id="simpleQuery" name="simpleQuery" size="15" maxlength="255" value="" class="textField" /> </label>
 				{else}
 					{$filterInput}
@@ -32,7 +32,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td><label for="searchField">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<td><label for="searchField">
 				<select id="searchField" name="searchField" size="1" class="selectMenu">
 					{html_options_translate options=$articleSearchByOptions}
 				</select></label>
